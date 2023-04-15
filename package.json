@@ -9,8 +9,8 @@
     "dev": "concurrently \"tsc -w\" \"electron . --trace-warnings\" "
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Matthieu Witrowiez (github.com/D3adPlays)",
+  "license": "MIT (SEE LICENSE IN LICENSE FILE)",
   "dependencies": {
     "@types/chokidar": "^2.1.3",
     "@types/toastify-js": "^1.11.1",
