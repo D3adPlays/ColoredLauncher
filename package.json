@@ -1,0 +1,29 @@
+{
+  "name": "coloredlauncher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./.webpack/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron . --trace-warnings",
+    "dev": "concurrently \"tsc -w\" \"electron . --trace-warnings\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chokidar": "^2.1.3",
+    "@types/toastify-js": "^1.11.1",
+    "@xmcl/core": "^2.10.1",
+    "@xmcl/user": "^2.1.8",
+    "chokidar": "^3.5.3",
+    "electron": "^24.1.2",
+    "electron-log": "^4.4.8",
+    "electron-updater": "^5.3.0",
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

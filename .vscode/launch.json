@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "command": "npm run start",
+        "name": "Electron run start",
+        "request": "launch",
+        "type": "node-terminal",
+        "internalConsoleOptions": "neverOpen",
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "NODE_ENV": "development"
+        },
+        "stopOnEntry": true // Add this line to pause the debugger at the beginning of the program's execution
+      },
+      {
+        "command": "npm run dev",
+        "name": "Electron run dev",
+        "request": "launch",
+        "type": "node-terminal",
+        "internalConsoleOptions": "neverOpen",
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "NODE_ENV": "development"
+        },
+        "stopOnEntry": true // Add this line to pause the debugger at the beginning of the program's execution
+      }
+    ]
+  }
