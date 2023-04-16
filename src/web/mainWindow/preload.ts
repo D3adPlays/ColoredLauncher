@@ -1,20 +1,21 @@
-import { contextBridge, ipcRenderer } from 'electron';
+import { contextBridge, ipcMain, ipcRenderer, shell } from 'electron';
 import { log } from 'electron-log';
-
-//import * as core from "@xmcl/core"
-
-
-
 import path from 'path';
+
+
 contextBridge.exposeInMainWorld('api', {
     log: (message: string) => {
         log(message);
     },
     launchDiscord: () => {
-        window.open('https://coloredcity.fr/discord', '_blank');
+        shell.openExternal("https://coloredcity.fr/discord");
     },
     launch: (username: string) => {
         log("Démarrage de la procédure de lancement...");
+    },
+    close: () => {
+        log("Fermeture de l'application...");
+        ipcRenderer.send('close');
     },
 });
 

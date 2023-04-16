@@ -6,6 +6,11 @@ function openDiscord(){
     api.launchDiscord();
 }
 
+function closeButton() {
+    //@ts-expect-error
+    api.close();
+}
+
 function openSettings(){
     alert("Les parametres ne sont pas encore implémentés!");
 }

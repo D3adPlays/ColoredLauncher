@@ -23,3 +23,7 @@ export function createMainWindow(isdev: Boolean): void {
     });
     mainWindow.loadFile('./.webpack/web/mainWindow/index.html');
 }
+
+export function launchDiscord() {
+    throw new Error('Function not implemented.');
+}
