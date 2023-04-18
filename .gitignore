@@ -1,4 +1,4 @@
 .webpack/
-.vscode/
+.vscode
 node_modules/
 public/
