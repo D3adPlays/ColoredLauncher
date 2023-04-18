@@ -10,6 +10,7 @@ if (isdev) {
 }
 import * as mainWindow from './windows/mainWindow';
 import * as updaterWindow from './windows/updaterWindow';
+import path from 'path';
 
 app.on('ready', () => {
     main();
@@ -19,6 +20,13 @@ async function main() {
     logger.transports.console.format = '[{h}:{i}:{s}] [ColoredV2] >> {text}';
     logger.log('App is ready');
     logger.log('Is dev: ' + isdev);
+    //transcript to log file
+    logger.transports.file.level = 'info';
+    logger.transports.file.fileName = 'launcher.log';
+    logger.transports.file.resolvePath = (variables: any) => {
+        return path.join(__dirname, "/logs/launcher.log");
+    };
+
     //check for launcher maintenance
     updaterWindow.createUpdateWindow(isdev);
     logger.log('Checking for maintenance');
