@@ -14,7 +14,7 @@ Feel free ro report any bugs or features you want added!
 
 As previousely metioned, this is my first Typescrypt/electon app, do the compile/execute process is verry basic;
 
-  1. Run ```npm install``` to install all the required dependencies.
+  1. Run ```npm install```, and ```npm install -g typescript``` to install all the required dependencies.
 
   2. Run ```npm run dev``` to launch the application with [electron-reload](https://github.com/yan-foto/electron-reload) enabled **OR** run ```npm run start``` to launch the application without [electron-reload](https://github.com/yan-foto/electron-reload) enabled.
   
